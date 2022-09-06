@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import Header from './Header.js';
 import Inventory from './Inventory.js';
 import Order from './Order.js';
@@ -6,11 +7,16 @@ import sampleFishes from '../sample-fishes.js';
 import Fish from './Fish.js';
 import base from '../base.js';
 
+
 class App extends React.Component {
     state = {
         fishes: {},
         order: {},
     };
+
+    static propTypes = {
+        match: PropTypes.object
+    }
 
     // load fishes in firebase data
     componentDidMount() {

@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
+import PropTypes from "prop-types";
 import { getFunName } from '../helpers';
+
 
 class StorePicker extends React.Component {
 // instead of arrow function
@@ -9,6 +11,9 @@ class StorePicker extends React.Component {
     // }
 
     myInput = React.createRef();
+    static propTypes = {
+        history: PropTypes.object
+    }
 
     goToStore = (e) => {
         e.preventDefault();
